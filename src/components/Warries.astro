@@ -1,0 +1,36 @@
+---
+import SectionTitle from "./SectionTitle.astro";
+import PointText from "./PointText.astro";
+import Problem from "./Problem.astro";
+import { images } from "../assets/images";
+---
+
+<SectionTitle title="こんな悩みを持っていませんか？" />
+<!-- 悩み一覧 -->
+<div
+  class="border-2 sm:border-8 md:border-[5px] border-white p-4 sm:p-6 md:p-8 mb-8 md:mb-16"
+>
+  <div class="grid grid-cols-1 sm:grid-cols-2 gap-4 sm:gap-6 md:gap-8">
+    <Problem
+      IconImage={images.golfIcon3}
+      ImageAlt="ゴルフアイコン"
+      problemText="思うように飛ばない"
+    />
+    <Problem
+      IconImage={images.golfIcon2}
+      ImageAlt="ゴルフアイコン"
+      problemText="スコアが頭打ち"
+    />
+    <Problem
+      IconImage={images.golfIcon1}
+      ImageAlt="ゴルフアイコン"
+      problemText="フォームが安定しない"
+    />
+    <Problem
+      IconImage={images.golfIcon6}
+      ImageAlt="ゴルフアイコン"
+      problemText="練習方法がわからない"
+    />
+  </div>
+</div>
+<PointText subText="その悩み" mainText="UMゴルフが解決します" />

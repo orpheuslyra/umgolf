@@ -1,0 +1,57 @@
+---
+import { images } from "../assets/images";
+import Image from "astro/components/Image.astro";
+import SectionTitle from "./SectionTitle.astro";
+import FeatureCard from "./FeatureCard.astro";
+---
+
+<section class="bg-black py-12 md:py-20 px-4">
+  <div class="max-w-6xl mx-auto">
+    <!-- タイトル -->
+    <SectionTitle subText="他とは違う" title="UMゴルフの特徴" />
+    <div
+      class="mb-12 md:mb-20 border-2 border-white rounded-lg p-6 md:p-8 text-left"
+    >
+      <div class="mb-6">
+        <Image src={images.umFeature} alt={"UMゴルフの特徴"} class="mx-auto" />
+      </div>
+      <p class="text-white text-base md:text-xl leading-relaxed">
+        UMゴルフのレッスンでは、ツアーでも使われる ＜タイトリスト
+        ProV1＞を使用しています。<br />
+        試合球を使用することで軌道解析機が正確に計測を行うことができます。 <br
+        />
+        そのデータをもとにプロコーチが的確なアドバイスを行うため、 再現性が高く、高品質なレッスンを提供しています。<br
+        />
+        また、スイング解析機付の基礎練習場でいつでも反復練習をしていただけます。
+      </p>
+    </div>
+    <FeatureCard
+      featureTitle="プロコーチ"
+      ImageSrc={[images.coach1, images.coach2, images.coach3]}
+      ImageAlt={["田中コーチ", "西コーチ", "曽我コーチ"]}
+      featureText="現役ツアーなどの競技に参戦しているアスリートプロとティーチングプロとして実績を持つコーチのみを採用しています。<br/>自らも日々最新技術の習得に努力を怠らないコーチが在籍しており、他のスタジオのPGAティーチングプロが学びに来るほどのハイレベルなレッスンを展開しています。"
+    />
+    <FeatureCard
+      featureTitle="高精度解析機"
+      ImageSrc={images.simulator}
+      ImageAlt={"高性能シミュレータ"}
+      featureText="現時点で最高精度と言われる解析機器を設置しています。<br />スイング解析とボール解析の同時解析でスイングフォームとインパクトの“誤差”を見逃さず、数値で可視化します。経験や勘ではなく、データに基づくレッスンなので正しいティーチングが可能です。"
+    />
+    <FeatureCard
+      featureTitle="タイトリスト Pro V1"
+      ImageSrc={images.proV1}
+      ImageAlt={"試合球"}
+      featureText="レッスンには高コストな試合球「タイトリストPRO V1X」を採用。<br />高精度な解析機器と試合球の同時使用により、わずかな打感の違いも正確にデータ化し、より正しいレッスンに繋がります。コストよりも「本物の上達」を優先するUMゴルフのこだわりです。"
+    />
+    <FeatureCard
+      featureTitle="毎日利用できる基礎練習場"
+      ImageSrc={images.practice}
+      ImageAlt={"練習場"}
+      featureText="50分間、スイングカメラ付き打席をいつでも利用可能。<br />レッスン後の基礎練習やフォーム固めに最適です。初心者にはNGF認定インストラクターによる無料レッスンも実施。日々の積み重ねが、本番での再現性を生みます。"
+    />
+
+    <div class="mt-12 md:mt-20">
+      <Image src={images.umgolfResult} alt="UMゴルフの実績" class="mx-auto" />
+    </div>
+  </div>
+</section>

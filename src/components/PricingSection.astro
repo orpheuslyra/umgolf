@@ -1,0 +1,37 @@
+---
+import SectionTitle from "./SectionTitle.astro";
+import { images } from "../assets/images";
+import Image from "astro/components/Image.astro";
+import UMLogo from "./UMLogo.astro";
+---
+
+<section class="bg-black py-12 md:py-20 px-4">
+  <div class="max-w-4xl mx-auto">
+    <!-- タイトル -->
+    <SectionTitle subText="本気で上達するための" title="シンプルなプラン" />
+    <!-- プランカード -->
+    <Image src={images.plan} alt="月額プラン" />
+
+    <!-- 入会金情報 -->
+    <div class="text-center my-8 md:mb-12">
+      <div class="text-xl md:text-3xl text-white mb-4">
+        <span class="text-xl md:text-3xl">入会金 10,000 円</span>
+      </div>
+      <div class="text-xl md:text-3xl text-white">
+        <span class="text-xl md:text-3xl">無料体験後の当日ご入会で</span>
+        <span class="text-3xl md:text-6xl font-bold ml-4">無料</span>
+      </div>
+    </div>
+
+    <!-- CTAボタン -->
+    <div class="text-center">
+      <button
+        onclick="document.getElementById('contact').scrollIntoView({behavior: 'smooth'})"
+        class="bg-gradient-to-b from-yellow-300 to-yellow-400 via-white via-50% text-black font-bold text-xl md:text-3xl px-8 py-4 md:px-16 md:py-6 rounded-3xl shadow-lg hover:shadow-xl hover:-translate-y-1 active:translate-y-0 active:shadow-md transition-all duration-200 cursor-pointer"
+      >
+        無料体験を申し込む
+      </button>
+    </div>
+  </div>
+  <UMLogo />
+</section>

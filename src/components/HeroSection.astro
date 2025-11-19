@@ -1,0 +1,40 @@
+---
+import { Image } from "astro:assets";
+import { images } from "../assets/images";
+---
+
+<section
+  class="relative bg-black h-auto sm:min-h-screen overflow-hidden -mx-4 sm:mx-0"
+>
+  <!-- メイン画像 -->
+  <div
+    class="relative w-full h-auto sm:absolute sm:inset-0 sm:h-full sm:w-full"
+  >
+    <!-- デスクトップ用画像 -->
+    <Image
+      src={images.hero}
+      alt="ゴルフレッスン"
+      class="hidden sm:block w-full h-full object-cover"
+    />
+    <!-- スマートフォン用画像 -->
+    <Image
+      src={images.heroSp}
+      alt="ゴルフレッスン"
+      class="block sm:hidden w-full h-auto object-cover"
+    />
+  </div>
+
+  <!-- CTAボタン -->
+  <a href="https://coubic.com/umgolf">
+    <div
+      class="absolute bottom-4 left-1/2 transform -translate-x-1/2 sm:bottom-8 sm:right-8 sm:left-auto sm:transform-none md:bottom-20 md:right-20"
+    >
+      <button
+        onclick="document.getElementById('contact').scrollIntoView({behavior: 'smooth'})"
+        class="bg-gradient-to-b from-yellow-300 to-yellow-400 via-white via-50% text-black font-bold text-base sm:text-lg md:text-2xl px-6 py-3 sm:px-8 sm:py-4 md:px-12 md:py-6 rounded-3xl shadow-lg hover:shadow-xl hover:-translate-y-1 active:translate-y-0 active:shadow-md transition-all duration-200 whitespace-nowrap cursor-pointer"
+      >
+        正しいレッスンを体験する
+      </button>
+    </div>
+  </a>
+</section>

@@ -1,0 +1,86 @@
+---
+import { Image } from "astro:assets";
+import { images } from "../assets/images";
+import PointText from "./PointText.astro";
+import HighLightText from "./HighLightText.astro";
+import SectionTitle from "./SectionTitle.astro";
+import UMLogo from "./UMLogo.astro";
+---
+
+<section class="bg-black py-12 md:py-20 px-4">
+  <div class="max-w-6xl mx-auto mb-10">
+    <!-- タイトル -->
+    <div class="text-center mb-10">
+      <!-- メッセージ -->
+      <div class="text-center mb-8 md:mb-20">
+        <SectionTitle subText="上達しない原因は" title="あなたではありません" />
+        <p class="text-lg md:text-2xl font-bold text-white mb-8">
+          多くのレッスンでは<br />
+          コーチが<HighLightText text="スイングの残像" />や
+          <HighLightText text="球筋" />だけで <br />
+          フォームを判断しています
+        </p>
+        <p class="text-lg md:text-2xl font-bold text-white mb-8">
+          レッスンに弾道解析機が導入されていても<br />
+          <HighLightText text="解析精度" />が低ければ<br />
+          <HighLightText text="指導精度" />も必然的に低くなります
+        </p>
+        <p class="text-lg md:text-2xl font-bold text-white mb-8">
+          さらに多くのスタジオでは<br />
+          レッスンにレンジボールという
+          <HighLightText text="練習球" />
+          を使用しています
+        </p>
+        <p class="text-lg md:text-2xl font-bold text-white mb-8">
+          <HighLightText text="練習球" />は試合球とは<br />
+          <HighLightText text="飛距離とスピン量が異なる" />ため、<br />
+          解析機を使ってもその測定結果は
+          <HighLightText text="正確ではありません" />
+        </p>
+        <p class="text-lg md:text-2xl font-bold text-white mb-8">
+          この条件でどれだけレッスンを重ねても<br />
+          <HighLightText text="正しい指導と改善" />には繋がりません
+        </p>
+        <p class="text-lg md:text-2xl font-bold text-white mb-8">
+          本来、ゴルフのレッスンは
+        </p>
+        <div
+          class="box-border border-2 border-white inline-block px-4 py-2 mb-8"
+        >
+          <p class="text-lg md:text-2xl font-bold text-white">
+            精度の高い解析機<br />×<br />正確に計測できるボール<br />×<br
+            />プロのコーチング<br />
+          </p>
+        </div>
+        <p class="text-lg md:text-2xl font-bold text-white mb-8">
+          この3つが揃って初めて成立します
+        </p>
+        <p class="text-lg md:text-2xl font-bold text-white mb-8">
+          このセットがなければ<br />
+          結局は<HighLightText text="コーチの主観に丸投げ" />の<br />
+          <HighLightText text="旧態依然としたレッスン" />になります
+        </p>
+        <p class="text-lg md:text-2xl font-bold text-white mb-8">
+          そして何より危険なのは、<br />
+          コーチ自身の実績や名前すらも<br />
+          <HighLightText text="公開していない" /><br />
+          スタジオが増えていることです
+        </p>
+        <p class="text-lg md:text-2xl font-bold text-white mb-8">
+          そんな環境にあなたのゴルフ人生を<br />
+          <HighLightText text="預けてはいけません" />
+        </p>
+      </div>
+      <Image
+        src={images.golfProblems}
+        alt="危険なレッスン"
+        class="w-full max-w-4xl mx-auto rounded-lg shadow-lg mb-10"
+      />
+      <PointText
+        subText="UMゴルフは"
+        mainText="そんな危険なレッスンを終わらせます"
+      />
+    </div>
+  </div>
+  <UMLogo />
+</section>

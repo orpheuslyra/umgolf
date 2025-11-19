@@ -1,0 +1,60 @@
+---
+import { images } from "../assets/images";
+import Image from "astro/components/Image.astro";
+---
+
+<footer class="bg-green-700 py-12 md:py-16 px-4">
+  <div class="max-w-6xl mx-auto">
+    <div class="grid grid-cols-1 md:grid-cols-2 gap-8 md:gap-12 items-start">
+      <!-- 左側: ロゴと住所情報 -->
+      <div class="space-y-4 md:space-y-6">
+        <h3
+          class="text-2xl md:text-4xl font-bold text-white text-center md:text-left font-serif"
+        >
+          UM GOLF
+        </h3>
+        <div class="text-white text-sm md:text-lg space-y-2">
+          <p>〒630-8031</p>
+          <p>奈良市柏木町480-1 奈良パワーシティ2F</p>
+          <p>営業時間　10:00 〜 21:00</p>
+        </div>
+      </div>
+
+      <!-- 右側: 連絡先情報 -->
+      <div class="space-y-4 md:space-y-6">
+        <!-- 電話番号 -->
+        <div
+          class="bg-gradient-to-r from-yellow-600 to-yellow-400 rounded-full px-4 py-3 md:px-8 md:py-4 border border-black"
+        >
+          <p class="text-white text-xl md:text-4xl font-bold text-center">
+            070-9000-8811
+          </p>
+        </div>
+
+        <!-- メール・ウェブサイト -->
+        <div class="space-y-3 md:space-y-4">
+          <div class="flex items-center">
+            <Image
+              src={images.mailIcon}
+              alt=""
+              class="w-6 h-6 md:w-8 md:h-8 mr-3 flex-shrink-0"
+            />
+            <p class="text-white text-sm md:text-lg break-all">
+              <a href="mailto:umgolf68@gmail.com">umgolf68@gmail.com</a>
+            </p>
+          </div>
+          <div class="flex items-center">
+            <Image
+              src={images.wwwIcon}
+              alt=""
+              class="w-6 h-6 md:w-8 md:h-8 mr-3 flex-shrink-0"
+            />
+            <p class="text-white text-sm md:text-lg break-all">
+              <a href="https://umgolf68.com/">https://umgolf68.com/</a>
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</footer>

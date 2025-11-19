@@ -1,0 +1,82 @@
+---
+import { images } from "../assets/images";
+import Image from "astro/components/Image.astro";
+---
+
+<section class="bg-black py-12 md:py-20 px-4">
+  <div class="max-w-6xl mx-auto">
+    <!-- タイトル -->
+    <h2
+      class="text-2xl md:text-4xl font-bold text-center text-white mb-8 md:mb-16"
+    >
+      お客様の声
+    </h2>
+
+    <!-- テスティモニアル一覧 -->
+    <div class="grid grid-cols-1 lg:grid-cols-2 gap-4 sm:gap-6 md:gap-8">
+      <!-- テスティモニアル1 -->
+      <div
+        class="bg-white rounded-[15px] sm:rounded-[20px] md:rounded-[30px] p-4 sm:p-6 md:p-8 flex flex-col sm:flex-row items-start gap-3 sm:gap-4 md:gap-6"
+      >
+        <Image
+          src={images.golfer1}
+          alt="お客様"
+          class="w-12 h-12 sm:w-16 sm:h-16 md:w-24 md:h-24 rounded-full flex-shrink-0 self-center sm:self-start"
+        />
+        <p
+          class="text-black text-xs sm:text-sm md:text-lg leading-relaxed text-center sm:text-left"
+        >
+          スイングの画像を一打一打確認できるようになっています。自分のスイングの欠点を認識し、そのポイントが改善できたかどうかの確認もできるので、練習の成果が明確になりとっても良いです♪
+        </p>
+      </div>
+
+      <!-- テスティモニアル2 -->
+      <div
+        class="bg-white rounded-[15px] sm:rounded-[20px] md:rounded-[30px] p-4 sm:p-6 md:p-8 flex flex-col sm:flex-row items-start gap-3 sm:gap-4 md:gap-6"
+      >
+        <Image
+          src={images.golfer2}
+          alt="お客様"
+          class="w-12 h-12 sm:w-16 sm:h-16 md:w-24 md:h-24 rounded-full flex-shrink-0 self-center sm:self-start"
+        />
+        <p
+          class="text-black text-xs sm:text-sm md:text-lg leading-relaxed text-center sm:text-left"
+        >
+          金子プロの2回目のレッスンでしたが、ポイントを毎回ひとつずつ指摘してくれるので分かりやすく、言葉だけでは無く、計測機器でも確認出来るので、これからのレッスンも楽しみです
+        </p>
+      </div>
+      <!-- テスティモニアル3 -->
+      <div
+        class="bg-white rounded-[15px] sm:rounded-[20px] md:rounded-[30px] p-4 sm:p-6 md:p-8 flex flex-col sm:flex-row items-start gap-3 sm:gap-4 md:gap-6"
+      >
+        <Image
+          src={images.golfer3}
+          alt="お客様"
+          class="w-12 h-12 sm:w-16 sm:h-16 md:w-24 md:h-24 rounded-full flex-shrink-0 self-center sm:self-start"
+        />
+        <p
+          class="text-black text-xs sm:text-sm md:text-lg leading-relaxed text-center sm:text-left"
+        >
+          今ある個性は生かしつつ、問題点解決のためのポイントを複数指摘してもらえて、とても役に立ちました。
+          全てが腑に落ちる指摘で、一つ一つこれからの練習で矯正していきたいと思います。
+          ありがとうございました。
+        </p>
+      </div>
+      <!-- テスティモニアル4 -->
+      <div
+        class="bg-white rounded-[15px] sm:rounded-[20px] md:rounded-[30px] p-4 sm:p-6 md:p-8 flex flex-col sm:flex-row items-start gap-3 sm:gap-4 md:gap-6"
+      >
+        <Image
+          src={images.golfer4}
+          alt="お客様"
+          class="w-12 h-12 sm:w-16 sm:h-16 md:w-24 md:h-24 rounded-full flex-shrink-0 self-center sm:self-start"
+        />
+        <p
+          class="text-black text-xs sm:text-sm md:text-lg leading-relaxed text-center sm:text-left"
+        >
+          田中プロのおしえかたは本当に分かりやすく、自分の癖を活かして、直すべきところは直して教えてくれるので本当に毎回、目から鱗です。
+        </p>
+      </div>
+    </div>
+  </div>
+</section>

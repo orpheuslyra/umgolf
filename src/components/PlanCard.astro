@@ -1,0 +1,28 @@
+---
+const { price } = Astro.props;
+---
+
+<div
+  class="bg-gradient-to-b from-yellow-600 to-white rounded-[50px] md:rounded-[100px] p-6 md:p-12 mb-8 md:mb-12"
+>
+  <div
+    class="bg-white rounded-[30px] md:rounded-[55px] p-6 md:p-12 text-center mb-6 md:mb-8"
+  >
+    <div class="text-3xl md:text-6xl font-bold text-black mb-2 md:mb-4">
+      {price}円/月
+    </div>
+    <div class="text-xl md:text-3xl font-medium text-black mb-4 md:mb-6">
+      （税込 {price * 1.1}円/月）
+    </div>
+    <div class="text-lg md:text-2xl font-bold text-black">
+      月2回のレッスン + 毎日打ち放題
+    </div>
+  </div>
+  <div class="text-center text-black text-base md:text-xl">
+    <p class="mb-4">
+      経験豊富なインストラクターによる個別指導が月に2回受けられます。
+    </p>
+    <p class="mb-4">また、月額料金に打ち放題利用が含まれており、</p>
+    <p>いつでも快適にお客様のペースで練習を続けることができます。</p>
+  </div>
+</div>
