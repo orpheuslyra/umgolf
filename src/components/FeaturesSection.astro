@@ -11,118 +11,60 @@ import UMLogo from "./UMLogo.astro";
     <!-- タイトル -->
     <SectionTitle subText="他とは違う" title="UMゴルフの特徴" />
 
-    <!-- プロコーチ -->
-    <div class="mb-12 md:mb-20">
-      <div class="grid grid-cols-1 lg:grid-cols-2 gap-8 items-center">
-        <div class="text-white text-base md:text-xl leading-relaxed">
-          <p class="mb-4">
-            ティーチングプロとして実績を持つコーチのみを採用しています。
-            現役ツアー参戦中のプロも在籍し、自らも月数万円を投じて最新技術を習得しています。
-            その結果、他のPGAティーチングプロが学びに来るほどのハイレベルなレッスンを展開しています。
-          </p>
-        </div>
-
-        <div class="grid grid-cols-3 gap-2 sm:gap-4">
-          <Image
-            src={images.coach1}
-            alt="プロコーチ1"
-            class="w-full h-80 object-cover rounded-lg"
-          />
-          <Image
-            src={images.coach2}
-            alt="プロコーチ2"
-            class="w-full h-80 object-cover rounded-lg"
-          />
-          <Image
-            src={images.coach3}
-            alt="プロコーチ3"
-            class="w-full h-80 object-cover rounded-lg"
-          />
-        </div>
+    <!-- UMゴルフの特徴説明 -->
+    <div
+      class="mb-12 md:mb-20 border-2 border-white rounded-lg p-6 md:p-8 text-left"
+    >
+      <div class="mb-6">
+        <Image src={images.umFeature} alt="UMゴルフの特徴" class="mx-auto" />
       </div>
+      <p class="text-white text-base md:text-lg leading-relaxed px-2 md:px-20">
+        UMゴルフのレッスンでは、ツアーでも使われる〈タイトリスト Pro
+        V1〉を使用するため、軌道解析機が正確に計測を行うことができます。<br />
+        そのデータをもとにプロコーチが的確なアドバイスを行うため、再現性が高く、高品質なレッスンを提供しています。<br
+        />
+        併設の基礎練習場でいつでも反復練習をしていただけます。
+      </p>
     </div>
+
+    <!-- プロコーチ -->
+    <FeatureCard
+      featureTitle="プロコーチ"
+      ImageSrc={[images.coach1, images.coach2, images.coach3]}
+      ImageAlt={["田中コーチ", "西コーチ", "曽我コーチ"]}
+      featureText="現役ツアーなどの競技に参戦しているアスリートプロとティーチングプロとして実績を持つコーチのみを採用しています。<br />自らも日々最新技術の習得に努力を怠らないコーチが在籍しており、他のスタジオのPGAティーチングプロが学びに来るほどのハイレベルなレッスンを展開しています。"
+    />
 
     <!-- 高性能シミュレータ -->
-    <div class="mb-12 md:mb-20">
-      <h3
-        class="text-xl md:text-3xl font-bold text-white mb-6 md:mb-8 font-serif"
-      >
-        高性能シミュレータ
-      </h3>
-      <div class="grid grid-cols-1 lg:grid-cols-2 gap-8 items-center">
-        <Image
-          src={images.simulator}
-          alt="高性能シミュレータ"
-          class="w-full h-120 md:h-80 object-contain rounded-lg"
-        />
-
-        <div class="text-white text-base md:text-xl leading-relaxed">
-          <p class="mb-4">
-            現時点で最高精度の解析機器を設置しています。スイング解析とボール解析の同時解析でスイングフォームとインパクトの\"誤差\"を見逃さず、数値で可視化します。
-          </p>
-          <p>
-            経験や勘ではなく、データに基づくレッスンなので正しいティーチングが可能です。
-          </p>
-        </div>
-      </div>
-    </div>
+    <FeatureCard
+      featureTitle="高精度解析機"
+      ImageSrc={images.simulator}
+      ImageAlt="高性能シミュレータ"
+      featureText="現時点で最高精度と言われる解析機器を設置しています。<br />スイング解析とボール解析の同時解析でスイングフォームとインパクトの誤差を見逃さず、数値で可視化します。経験や勘ではなく、データに基づくレッスンなので正しいティーチングが可能です。"
+    />
 
     <!-- タイトリスト PRO V1 使用 -->
-    <div class="mb-12 md:mb-20">
-      <h3
-        class="text-xl md:text-3xl font-bold text-white mb-6 md:mb-8 font-serif"
-      >
-        タイトリスト PRO V1 使用
-      </h3>
-      <div class="grid grid-cols-1 lg:grid-cols-2 gap-8 items-center">
-        <Image
-          src={images.proV1}
-          alt="タイトリスト PRO V1"
-          class="w-full h-120 md:h-120 object-contain rounded-lg lg:order-2"
-        />
-        <div class="text-white text-base md:text-xl leading-relaxed lg:order-1">
-          <p class="mb-4">
-            プロコーチレッスンにツアー使用球\"タイトリストPRO V1X\"を採用。
-          </p>
-          <p class="mb-4">
-            わずかな打感の違いも正確にデータ化し、正しい改善につなげます。
-          </p>
-          <p>コストよりも\"本物の上達\"を優先するUMゴルフのこだわりです。</p>
-        </div>
-      </div>
-    </div>
+    <FeatureCard
+      featureTitle="タイトリスト Pro V1"
+      ImageSrc={images.proV1}
+      ImageAlt="試合球"
+      featureText="レッスンには高コストな試合球タイトリストPRO V1Xを採用。<br />高精度な解析機器と試合球の同時使用により、わずかな打感の違いも正確にデータ化し、より正しいレッスンに繋がります。コストよりも本物の上達を優先するUMゴルフのこだわりです。"
+    />
 
     <!-- 毎日利用できる基礎練習場 -->
-    <div class="mb-12 md:mb-20">
-      <h3
-        class="text-xl md:text-3xl font-bold text-white mb-6 md:mb-8 font-serif"
-      >
-        毎日利用できる基礎練習場
-      </h3>
-      <div class="grid grid-cols-1 lg:grid-cols-2 gap-8 items-center">
-        <Image
-          src={images.practice}
-          alt="基礎練習場"
-          class="w-full h-48 md:h-64 object-cover rounded-lg"
-        />
-        <div class="text-white text-base md:text-xl leading-relaxed">
-          <p class="mb-4">
-            50分間、スイングカメラ付き打席をいつでも利用可能。レッスン後の基礎練習やフォーム固めに最適です。
-          </p>
-          <p class="mb-4">
-            初心者にはNGF認定インストラクターによる無料レッスンも実施。
-          </p>
-          <p>日々の積み重ねが、本番での再現性を生みます。</p>
-        </div>
-      </div>
-    </div>
+    <FeatureCard
+      featureTitle="毎日利用できる基礎練習場"
+      ImageSrc={images.practice}
+      ImageAlt="基礎練習場"
+      featureText="50分間、スイングカメラ付き打席をいつでも利用可能。レッスン後の基礎練習やフォーム固めに最適です。初心者にはNGF認定インストラクターによる無料レッスンも実施。日々の積み重ねが、本番での再現性を生みます。"
+    />
 
     <!-- データ×プロ指導 -->
-    <div class="mb-12 md:mb-20">
+    <div class="px-4 md:px-28 mb-8 md:mb-20">
       <Image
         src={images.umgolfResult}
         alt="UMゴルフの実績"
-        class="w-full h-48 md:h-64 object-contain rounded-lg"
+        class="w-full h-auto object-contain rounded-lg"
       />
     </div>
   </div>
