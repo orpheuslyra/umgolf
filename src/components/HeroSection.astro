@@ -8,13 +8,14 @@ import { images } from "../assets/images";
 >
   <!-- メイン画像 -->
   <div
-    class="relative w-full h-auto sm:absolute sm:inset-0 sm:h-full sm:w-full"
+    class="relative w-full h-auto sm:absolute sm:inset-0 sm:h-full sm:w-full sm:flex sm:items-center sm:justify-center"
   >
     <!-- デスクトップ用画像 -->
     <Image
       src={images.hero}
       alt="ゴルフレッスン"
-      class="hidden sm:block w-full h-full object-cover"
+      class="hidden sm:block object-cover"
+      style="width: auto; height: 100vh; max-width: 1920px;"
     />
     <!-- スマートフォン用画像 -->
     <Image
@@ -22,10 +23,10 @@ import { images } from "../assets/images";
       alt="ゴルフレッスン"
       class="block sm:hidden w-full h-auto object-cover"
     />
+
     <!-- CTAボタン -->
     <div
-      class="absolute left-1/2 transform -translate-x-1/2"
-      style="bottom: 60px;"
+      class="absolute bottom-4 left-1/2 transform -translate-x-1/2 sm:bottom-8 sm:right-8 sm:left-auto sm:transform-none md:bottom-20 md:right-20"
     >
       <button
         onclick="document.getElementById('contact').scrollIntoView({behavior: 'smooth'})"
