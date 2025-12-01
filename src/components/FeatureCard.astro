@@ -32,11 +32,11 @@ const isMultiple = Array.isArray(ImageSrc);
           <div class="lg:w-1/2">
             <div class="grid grid-cols-3 gap-3 md:gap-4">
               {ImageSrc.map((src, i) => (
-                <div class="relative overflow-hidden rounded-xl shadow-lg group/image">
+                <div class="relative overflow-hidden rounded-xs shadow-lg group/image">
                   <Image
                     src={src}
                     alt={Array.isArray(ImageAlt) ? (ImageAlt[i] ?? "") : ""}
-                    class="w-full object-contain transition-transform duration-300 group-hover/image:scale-105"
+                    class="w-full object-fill transition-transform duration-300 group-hover/image:scale-105"
                   />
                   <div class="absolute inset-0 bg-black/20 opacity-0 group-hover/image:opacity-100 transition-opacity duration-300" />
                 </div>
