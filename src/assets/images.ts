@@ -7,7 +7,7 @@ import golfIcon3 from './images/golf-icon-3.png';
 import golfIcon6 from './images/golf-icon-6.png';
 import coach1 from './images/tanaka.png';
 import coach2 from './images/nishi.jpg';
-import coach3 from './images/soga.png';
+import coach3 from './images/takenouchi.jpg';
 import simulator from './images/simulator.png';
 import proV1 from './images/golfball.png';
 import practice from './images/practice.JPG';
