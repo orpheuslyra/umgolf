@@ -17,6 +17,7 @@ jobs:
 
       - name: Build Project
         run: |
+          npm install astro-relative-links 
           npm install
           npm run build
 
